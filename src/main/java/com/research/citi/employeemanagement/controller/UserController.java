@@ -17,7 +17,7 @@ import java.util.List;
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class UserController {
 
-    private final UserService userService;
+    UserService userService;
 
     @PostMapping("/user")
     public ResponseEntity<ResponseDTO> createUser(@RequestBody UserDTO userDTO) throws UserExistException {
